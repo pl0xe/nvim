@@ -1,4 +1,4 @@
-#Person NVIM Config
+# Person NVIM Config
 
 This is a personal nvim config. Trying to keep this as minimal as possible with
 least amount of dependencies is the goal for this config. I do not recommend using
