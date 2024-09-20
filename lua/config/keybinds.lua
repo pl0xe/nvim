@@ -2,7 +2,7 @@ vim.opt.mouse = 'a'
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = false
 vim.opt.autoindent = true
 vim.opt.tabstop=2
 vim.opt.shiftwidth=2
@@ -28,8 +28,10 @@ vim.api.nvim_set_keymap('n', '<leader><Right>', '<C-w>l', { noremap = true, sile
 -- nvim-tree specific ( DISABLES NETRW )
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeOpen<CR>', {}) -- open tree browser
-vim.api.nvim_set_keymap('n', '<leader>E', ':NvimTreeClose<CR>', {}) -- open tree browser
+
+vim.keymap.set('n', '<leader>e', function()
+    vim.cmd(':NvimTreeToggle')
+  end)
 
 -- telescope keybinds
 local builtin = require('telescope.builtin')
